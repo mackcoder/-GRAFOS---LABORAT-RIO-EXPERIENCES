@@ -52,7 +52,7 @@ void TGrafo::removeA(int v, int w){
 }
 
 // ⚠️EXERCICIO 1 - RELATORIO
-int TGrafoEX::inDegree(int v){
+int TGrafo::inDegree(int v){
     int ingrau = 0;
     for(int t = 0; t < n; t++){
         if(adj[t][v] == 1)  
@@ -62,7 +62,7 @@ int TGrafoEX::inDegree(int v){
 }
 
 // ⚠️EXERCICIO 2 - RELATORIO
-int TGrafoEX::outDegree(int v){
+int TGrafo::outDegree(int v){
     int outgrau = 0;
     for(int t = 0; t < n; t++){
         if(adj[v][t] == 1)  
@@ -109,7 +109,7 @@ void TGrafo::show(){
 
     // Resposta 12)
 
-    // Resposta 3)
+    // Resposta 13)
 
     std::cout << "\nfim da impressao do grafo." << std::endl;
 }

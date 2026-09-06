@@ -26,6 +26,9 @@ class TGrafo{
 		void insereA(int v, int w);
 		void removeA(int v, int w);
 		void show();
+		int inDegree(int v);
+		int outDegree(int v);
+		int degree(int v);
 		~TGrafo();		
 };	
 
