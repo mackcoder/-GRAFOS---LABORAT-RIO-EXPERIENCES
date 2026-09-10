@@ -29,10 +29,9 @@ class TGrafo{
 		int inDegree(int v);
 		int outDegree(int v);
 		int degree(int v);
-		int Fonte_check(int v);
+		bool Fonte_check(int v);
 		bool Sorvedouro(int v);
-		bool isSymetric();
-		void readfile(const char* grafo_example);
+		int isSymetric();
 		~TGrafo();		
 };	
 
