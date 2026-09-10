@@ -9,7 +9,7 @@
 int main(){
     //  chama o construtor para criar um grafo 4x4
     TGrafo g(4);
-    TGrafo g2(6);
+
     //insere as arestas do grafo
     //A={(0,1),(0,2),(2,1),(2,3),(1,3)}
     g.insereA(0,1);
@@ -19,9 +19,6 @@ int main(){
     g.insereA(1,3);
     //---------------------------------------------//
 
-    g2.readfile("grafo_example.txt");
-
-    g2.show(); 
     g.show();
 
     return 0;
