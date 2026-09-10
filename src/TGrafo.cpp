@@ -125,46 +125,16 @@ bool TGrafo::Sorvedouro(int v){
 }
 
 // ⚠️EXERCICIO 6 - RELATORIO
-bool TGrafo::isSymetric(){
+int TGrafo::isSymetric(){
     for(int a = 0; a < n; a++){
-        for(int b == 0; b < n; b++){
+        for(int b = 0; b < n; b++){
             // Checando se todo o grafo é simétrico:
-            if(adj[a][b] =! adj[b][a])
+            if(adj[a][b] != adj[b][a])
                 return 0;
         }
     }
-    return 0;
+    return 1;
 }
-
-// ⚠️EXERCICIO 7 - RELATORIO
-void TGrafo::readfile(const char* grafo_example){
-    std::ifstream file(grafo_example);
-
-    if(!file.is_open()){
-        std::cout << "ERROR - Unable to access file" << std::endl;
-        return;
-    }
-    int V;
-    int A;
-    file >> V;
-    file >> A;
-    
-
-    int v, t;
-    for(int k = 0; k < A; k++){
-        file >> v >> t;
-        insereA(v, t);
-    }
-
-    file.close();
-}
-
-// ⚠️EXERCICIO 8 - RELATORIO
-
-
-
-// ⚠️EXERCICIO 9 - RELATORIO
-
 
 // ⚠️EXERCICIO 10 - RELATORIO
 
@@ -186,39 +156,43 @@ void TGrafo::show(){
     std::cout << "\n";
     // Funções sobre Grau:
     // Resposta 1)
-    std::cout << "Grau de Entrada do vertice " << v << ": "<< inDegree(v) << std::endl; 
-
+    std::cout << "\nRESPOSTA 1)\n";
+    for(int index = 0; index < n; index++){
+        
+        std::cout << "Grau de Entrada do vertice " << index << ": "<< inDegree(index) << std::endl; 
+    }
+    
     // Resposta 2)
-    std::cout << "\nGrau de Saida do vertice " << v << ": "<< outDegree(v) << std::endl; 
-
+    std::cout << "\nRESPOSTA 2)\n";
+     for(int index = 0; index < n; index++){
+        std::cout << "Grau de Saida do vertice " << index << ": "<< outDegree(index) << std::endl; 
+    }
+    
     // Resposta 3)
-    std::cout << "Grau total do vertice: " << v << ": " << degree(v) << std::endl;
+    std::cout << "\nRESPOSTA 3)\n";
+    for(int v = 0; v < n; v++){
+        std::cout << "Grau total do vertice " << v << ": " << degree(v) << std::endl;
+    }
     //-----------------------------------------------------------------------------------//
     // Função Checa Fonte e Sorvedouro:
     // Resposta 4) && 5)
+    std::cout << "\nRESPOSTA 4 e 5)\n";
     for(int v = 0; v < n; v++){
         std::cout << "Vertice " << v << " -> Fonte: " << Fonte_check(v) << "|| Sorvedouro: " << Sorvedouro(v) << std::endl;
     }
     // Função Checa Simétrico:
     // Resposta 6)
-        if(isSymetric())
-            std::cout << "Grafo é Simétrico" << std::endl; 
-
-    // Resposta 7)
-
-
-    // Resposta 8)
-
-
-    // Resposta 9)
-
-
+    std::cout << "\nRESPOSTA 6)\n";
+    if(isSymetric())
+        std::cout << "Retorno de checagem de simetria -> Return: " << isSymetric() <<std::endl; 
+    else    
+        std::cout << "Retorno de checagem de simetria -> Return: " << isSymetric() <<std::endl; 
     // Resposta 10)
-
+    std::cout << "\nRESPOSTA 10)";
     // Resposta 11)
-
+    std::cout << "\nRESPOSTA 11)";
     // Resposta 12)
-
+    std::cout << "\nRESPOSTA 12)";
     // Resposta 13)
     
     std::cout << "\nfim da impressao do grafo." << std::endl;
